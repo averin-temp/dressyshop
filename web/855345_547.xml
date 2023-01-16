@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="windows-1251"?>
+		<!--	created with www.mysitemapgenerator.com	-->
+		<!DOCTYPE yml_catalog SYSTEM "shops.dtd">
+		<yml_catalog date="2017-10-18 11:47">
+		<shop>
+			<name>dressyshop.ru</name>
+			<company>dressyshop.ru</company>
+			<url>https://dressyshop.ru/</url>
+		<categories>
+			<category id="1">Товары в наличии</category>
+		</categories>
+		<offers>
+		</offers>
+</shop>
+</yml_catalog>

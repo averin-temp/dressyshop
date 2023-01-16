@@ -1,0 +1,119 @@
+.color-section .photos{
+    border: 2px solid #6e8fb1;
+    min-height: 100px;
+    margin: 10px 0;
+    padding: 5px;
+}
+
+.color-section .color-label{
+    display: block ;
+    margin: 5px 0;
+    font-weight: bold
+}
+
+.color-section .file-input [type=file]{
+    display: none;
+}
+
+.sizes input{
+    display: none;
+}
+
+.sizes label span{
+    display: block;
+    background-color: white;
+    border: 1px solid rgba(45, 105, 135, 0.38);
+    color: black;
+    padding: 6px 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.sizes label input:checked + span{
+    background-color: rgba(0, 47, 112, 0.76);
+    color: white;
+
+}
+
+.color-section .photos > div{
+    border: 1px solid rgba(0, 50, 126, 0.73);
+    margin: 5px;
+    float: left;
+    position: relative;
+}
+.color-section .photos > div span{
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+#template{
+    display: none;
+}
+
+.edit-box{
+    background-color: #dcf1ff;
+    padding: 20px;
+}
+.jcrop-holder{
+    margin: 0 auto ;
+}
+
+#modal_box .modal-dialog{
+    width: 800px;
+}
+
+.phohoh > div:first-of-type{
+    -webkit-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+}
+
+.phohoh > div:first-of-type{
+    -webkit-box-shadow: 3px 3px 12px 2px rgba(0,0,0,0.41);
+    -moz-box-shadow: 3px 3px 12px 2px rgba(0,0,0,0.41);
+    box-shadow: 3px 3px 12px 2px rgba(0,0,0,0.41);
+}
+
+.color-preview{
+    height:30px;
+    width: 30px;
+}
+
+#photos-section .has-error label{
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(255,0,0,1);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(255,0,0,1);
+    box-shadow: 0px 0px 5px 0px rgba(255,0,0,1);
+}
+#photos-section div.has-error:after{
+    content: "вы не выбрали ни одного размера";
+    color: #550000;
+}
+
+
+.dragover-style{
+    border: 4px solid #0000aa;
+}
+
+i.loading{
+    display: none;
+    width: 57px;
+    height: 20px;
+    position: absolute;
+    background-color: beige;
+    top: 10px;
+    left: 10px;
+}
+i.loading:after{
+    content: 'загрузка';
+}
+
+.photos > div{
+    width: 100px;
+    height: 100px;
+    background-image: url(../img/loading.gif);
+    background-position: center;
+}
+

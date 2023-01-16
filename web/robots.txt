@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /cart
+Disallow: /?page=
+Disallow: /admin 
+Disallow: /cache 
+Disallow: /catalog/testovaya_glavnaya
+Disallow: /niks
+Disallow: /system 
+Dissalow: /##
+Sitemap: http://dressyshop.ru/sitemap.xml
+Host: dressyshop.ru

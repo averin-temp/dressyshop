@@ -1,0 +1,52 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php
+
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/javascript text/css application/x-javascript
+BrowserMatch ^Mozilla/4 gzip-only-text/html
+BrowserMatch ^Mozilla/4.0[678] no-gzip
+BrowserMatch bMSIE !no-gzip !gzip-only-text/html
+<ifmodule mod_gzip.c>
+mod_gzip_on Yes
+mod_gzip_item_include file \.js$
+mod_gzip_item_include file \.css$ </IfModule>
+</IfModule>
+
+# Включаем кэш в браузерах посетителей
+<ifModule mod_headers.c>
+    # Все html и htm файлы будут храниться в кэше браузера один день
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "max-age=43200"
+    </FilesMatch>
+    # Все css, javascript и текстовые файлы будут храниться в кэше браузера одну неделю
+    <FilesMatch "\.(js|css|txt)$">
+        Header set Cache-Control "max-age=604800"
+    </FilesMatch>
+    # Все флэш файлы и изображения будут храниться в кэше браузера один месяц
+    <FilesMatch "\.(flv|swf|ico|gif|jpg|jpeg|png)$">
+        Header set Cache-Control "max-age=2592000"
+    </FilesMatch>
+    # Отключаем кеширование php и других служебных файлов
+    <FilesMatch "\.(pl|php|cgi|spl|scgi|fcgi)$">
+        Header unset Cache-Control
+    </FilesMatch>
+</IfModule>
+
+FileETag MTime Size
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType application/javascript "access plus 1 year"
+ExpiresByType text/javascript "access plus 1 year"
+ExpiresByType text/css "access plus 1 year"
+ExpiresByType text/html "access plus 7 day"
+ExpiresByType text/x-javascript "access 1 year"
+ExpiresByType image/gif "access plus 1 year"
+ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType image/jpg "access plus 1 year"
+ExpiresByType image/x-icon "access 1 year"
+ExpiresByType image/vnd.microsoft.icon "access 1 year"
+ExpiresByType application/x-shockwave-flash "access 1 year"
+</IfModule>
